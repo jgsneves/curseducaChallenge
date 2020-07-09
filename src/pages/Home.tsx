@@ -1,6 +1,6 @@
 import React from 'react';
 
-const App = () => {
+const Home = () => {
 
   function handleSubmit() {
     //
@@ -46,4 +46,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default Home;
