@@ -1,44 +1,90 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Curseduca](https://curseduca.com/application/images/logo-250px.png)
 
-## Available Scripts
+# Teste de Dev FrontEnd
 
-In the project directory, you can run:
+## Introdução
+Este é um repositório utilizado para os testes em processos seletivos de desenvolvedores(as) front-end do [Curseduca](https://curseduca.com).
 
-### `yarn start`
+## Especificação
+Criar um recurso simples de CRUD de postagens em um mural, similar ao existente em algumas redes sociais, consumindo uma API em JSON.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Cadastro de postagem
+    - Campos
+        - **Título**: campo texto
+        - **Categoria**: campo _select_
+        - **Conteúdo**: campo com editor WYSIWYG
+    - Ações
+        - Agendar
+            - Perguntar ao usuário para quando ele quer agendar a postagem desse conteúdo
+        - Postar agora
+- Listagem de postagens
+    - Buscar as postagens na API e exibi-las para o usuário
+    - Ter uma opção para apagar uma postagem
+    - Criar sistema de filtragem
+        - Por Autor
+        - Por Categoria
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Instruções
+- É **necessário** o uso de ReactJS e Redux
+- É **permitido** o uso de outras bibliotecas que te auxiliem no desenvolvimento _(ex: consumo de API, componentes prontos de UI, editor WYSIWYG etc)_
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **O que estamos buscando?**
+    - Alguma metodologia para definição e organização do seu código CSS
+    - Alguma metodologia para definição e organização dos seus componentes
+    - Estética agradável e layout responsivo
+        - Tenha cuidado e refinamento para entregar uma _interface_ bonita _(se necessário, utilize UI toolkits prontas)_
+    - Boa usabilidade
+        - Pense na experiência do usuário e exiba mensagens de confirmação, erro e sucesso, indicadores de carregamento etc
+    - As instruções de como rodar o projeto
+        - Recebemos muitos testes sem instruções de como configurá-lo, não cometa esse erro! 
+    - Estrutura, legibilidade e manutenibilidade do seu código
+        - Organize-o de uma forma que facilite intervenções futuras _(ex: necessidade de adicionar novos campos, filtros, ações)_
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **O que nos impressionaria?**
+    - Código escrito em TypeScript
+    - Utilização de design patterns
+    - Código _mobile-first_
+    - Utilização de abordagens de acessibilidade
+    - Componentização e extensibilidade dos componentes
+        - Tenha em mente que alguns desses componentes poderiam ser reutilizados no resto de seu sistema
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **O que nós não gostaríamos de ver?**
+    - Encontrar códigos não utilizados comentados em sua aplicação
+    - Encontrar muitas dependências não utilizadas em sua aplicação
 
-### `yarn eject`
+## API
+### Instalação
+Para rodar a API localmente, siga as instruções abaixo:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Faça o fork [deste repositório](https://github.com/curseduca/curseduca-frontend-react-test) e crie o seu projeto a partir dele
+2. Clone seu próprio repositório
+3. Inicie a instalação das dependências do projeto excutando `npm install`
+    - Caso seja necessário, execute: `npm audit fix` _(o próprio npm irá te instruir a fazer isso)_
+4. Se precisar alterar as informações padrões do servidor, copie o arquivo **.env.example** para **.env** e altere seus valores
+    - O endereço padrão é: `http://localhost:3000`
+5. Execute o comando `npm run serve` para rodar o servidor
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Uso
+1. Busque um access token através do endpoint `GET /auth/login` informando o email e senha do usuário
+    - Eles estão localizados em [src/Database/data/users.json](https://github.com/curseduca/curseduca-frontend-react-test/blob/master/src/Database/data/users.json)
+2. Utilize o token em todas as requisições seguintes através do cabeçalho `Authorization: Bearer <TOKEN>`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Endpoints 
+- `GET /users`
+- `GET /posts`
+- `POST /posts`
+- `DELETE /posts/<id>`
+- `GET /categories`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Como entrego meu teste?
+Envie um email [vagas@curseduca.com](vagas@curseduca.com) com o link para seu repositório
 
-## Learn More
+## Submit
+### Caso de uso
+Inicialmente planejei como a aplicação deveria se estruturar. Mapeei os casos de usos da aplicação e como utilizaria as tecnologias exigidas no desafio. Para acessar o
+CRUD e as postagens consumidas do DB, inicialmente o usuário deve logar na aplicação, no seguinte escopo:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src="https://github.com/jgsneves/curseducaChallenge/blob/master/desafio_curseduca.png" />
