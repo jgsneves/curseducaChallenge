@@ -81,3 +81,10 @@ Para rodar a API localmente, siga as instruções abaixo:
 
 ## Como entrego meu teste?
 Envie um email [vagas@curseduca.com](vagas@curseduca.com) com o link para seu repositório
+
+## Submit
+# Caso de uso
+Inicialmente planejei como a aplicação deveria se estruturar. Mapeei os casos de usos da aplicação e como utilizaria as tecnologias exigidas no desafio. Para acessar o
+CRUD e as postagens consumidas do DB, inicialmente o usuário deve logar na aplicação, no seguinte escopo:
+
+
