@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand {
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.linksDiv {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.link {
+    margin: 10px;
+}
