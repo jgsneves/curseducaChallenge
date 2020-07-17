@@ -1,8 +1,9 @@
 import React, { FormEvent, useState, ChangeEvent } from 'react';
-import HeaderNavBar from '../components/navbar/HeaderNavBar';
-import { Link } from 'react-router-dom';
+import HeaderNavBar from '../../components/navbar/HeaderNavBar';
+import FooterContent from '../../components/footer/Footer';
 import { FiLogIn } from 'react-icons/fi';
-import api from './../service/api';
+import api from '../../service/api';
+import './Home.css';
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -37,7 +38,7 @@ const Home = () => {
     <>
       <HeaderNavBar />
       
-      <main>
+      <main className="mainContainer">
         <form onSubmit={handleSubmit}>
           <h2>Faça login para acessar conteúdo:</h2>
 
@@ -48,13 +49,17 @@ const Home = () => {
             </legend>
 
             <div className="field">
-              <label>E-mail do Usuário</label>
-              <input type="email" name="email" id="email" onChange={handleInputChange}/>
+              <label>
+                E-mail do Usuário
+                <input type="email" name="email" id="email" onChange={handleInputChange}/>
+              </label>
             </div>
 
             <div className="field">
-              <label>Senha</label>
-              <input type="password" name="password" id="password" onChange={handleInputChange}/>
+              <label>
+                Senha
+                <input type="password" name="password" id="password" onChange={handleInputChange}/>
+              </label>
             </div>
 
             <button type="submit">
@@ -68,6 +73,7 @@ const Home = () => {
           </fieldset>
         </form>
       </main>
+      <FooterContent />
     </>
   );
 }

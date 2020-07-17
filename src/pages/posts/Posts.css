@@ -1,0 +1,51 @@
+* {
+    margin: 0px;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.fieldsetContainer {
+    min-width: 400px;
+}
+
+.postContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+}
+
+.post {
+    margin: 10px;
+    padding: 10px;
+    background-color: lightgrey;
+    border-radius: 4px;
+}
+
+.postHeader {
+    display: flex;
+}
+
+.postTitle {
+    margin: 10px;
+}
+
+.postUserName {
+    margin: 10px;
+}
+
+.postDate {
+    margin: 10px;
+    padding: 10px;
+}
